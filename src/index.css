@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@200;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@200;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Yellowtail&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #274C5B;
+    --green-color: #7EB693;
+    --yellow-color: #EFD372;
+    --purple-color: #D4D4D4;
+    --light-color: #F9F8F8;
+    --grey-color: #EFF6F1;
+    --dark-color: #525C60;
+    --font-family-sec: 'Yellowtail', cursive;
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --transition: all 500ms ease
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    color: var(--main-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+.container{
+    width: var(--container-width-md);
+    max-width: 1920px;
+    margin-inline: auto;
+}
+h1, h2, h3, h4{
+    line-height: 1.2;
+    color: var(--main-color);
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.4rem;
+}
+a{
+    color: var(--main-color);
+}
+img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+button{
+    cursor: pointer;
+}
+section{
+    margin-top: 10rem;
+}
+.section__head{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.section__head h3{
+    font-family: var(--font-family-sec);
+    color: var(--green-color);
+}
+
+
+
+
+
+
+
+
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.7rem;
+    width: fit-content;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+.btn:hover{
+    background: transparent !important;
+    border: 1px solid var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+    body{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+}
