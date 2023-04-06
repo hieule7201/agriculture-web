@@ -19,6 +19,7 @@
     --light-color: #F9F8F8;
     --grey-color: #EFF6F1;
     --dark-color: #525C60;
+    --real-price-color: #B8B8B8;
     --font-family-sec: 'Yellowtail', cursive;
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -86,6 +87,7 @@ section{
     align-items: center;
     gap: 0.2rem;
     padding: 0.6rem 1.4rem;
+    cursor: pointer;
     border-radius: 0.7rem;
     width: fit-content;
     font-weight: 600;
@@ -96,9 +98,80 @@ section{
 .btn:hover{
     background: transparent !important;
     border: 1px solid var(--main-color);
+    color: var(--main-color);
 }
 
 
+
+.card{
+    background: var(--light-color);
+    border-radius: 2rem;
+    transition: var(--transition);
+    position: relative;
+    padding: 1rem;
+}
+.card .card__classify{
+    position: absolute;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 0.8rem;
+    top: 8%;
+    left: 8%;
+    padding: 0.2rem 1rem;
+    border-radius: 0.4rem;
+}
+.card .card__img{
+    /* max-width: 18rem; */
+    aspect-ratio: 1;
+    /* max-height: 18rem; */
+    width: 100%;
+    border-radius: 1.4rem;
+    /* height: 100%; */
+}
+.card .card__name{
+    /* display: block; */
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* text-overflow: ellipsis;
+    word-wrap: break-word; */
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.card .card__line{
+    border-bottom: 2px solid var(--real-price-color);
+}
+.card .card__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__info .card__real{
+    font-size: 0.8rem;
+    text-decoration-line: line-through;
+    font-weight: 600;
+    color: var(--real-price-color);
+}
+.card__info .card__discount{
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+.card__info .stars__number{
+    display: flex;
+    gap: 0.1rem;
+}
+.card__info .stars__number svg{
+    color: var(--yellow-color);
+}
+.card:hover{
+    box-shadow: 0.4rem 0.4rem 0.3rem 0.4rem rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
 
 
 
